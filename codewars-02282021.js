@@ -60,27 +60,37 @@ function count(string) {
 //   });
 // };
 
-function isPalindrome(s) {
-  let rev = s.split("").reverse().join("");
-  return s === rev;
-}
+// function isPalindrome(s) {
+//   let rev = s.split("").reverse().join("");
+//   return s === rev;
+// }
 
-function longestPalindrome(s) {
-  let max_length = 0,
-    maxp = "";
+// function longestPalindrome(s) {
+//   let max_length = 0,
+//     maxp = "";
 
-  for (let i = 0; i < s.length; i++) {
-    let subs = s.substr(i, s.length);
-    for (let j = subs.length; j > 0; j--) {
-      let sub_sub_str = subs.substr(0, j);
-      if (sub_sub_str.length <= 1) continue;
-      if (isPalindrome(sub_sub_str)) {
-        if (sub_sub_str.length > max_length) {
-          max_length = sub_sub_str.length;
-          maxp = sub_sub_str;
-        }
+//   for (let i = 0; i < s.length; i++) {
+//     let subs = s.substr(i, s.length);
+//     for (let j = subs.length; j > 0; j--) {
+//       let sub_sub_str = subs.substr(0, j);
+//       if (sub_sub_str.length <= 1) continue;
+//       if (isPalindrome(sub_sub_str)) {
+//         if (sub_sub_str.length > max_length) {
+//           max_length = sub_sub_str.length;
+//           maxp = sub_sub_str;
+//         }
+//       }
+//     }
+//   }
+//   return maxp;
+// }
+
+var longestPalindrome=function(s){
+    if (!s) return 0;
+    for (let c = s.length; c > 0; c--) {
+      for (let i = 0; i <= s.length - c; i++) {
+        var check = s.substr(i, c);
+        if (check === check.split("").reverse().join("")) return c;
       }
     }
   }
-  return maxp;
-}
