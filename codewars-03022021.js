@@ -71,3 +71,62 @@ function upArray(arr) {
   arr.reduce((acc, cv) => acc + cv + 1);
   console.log(arr);
 }
+
+// ----
+
+// # If you can read this...
+// Task
+// You'll have to translate a string to Pilot's alphabet (NATO phonetic alphabet).
+// Input:
+// If, you can read?
+// Output:
+// India Foxtrot , Yankee Oscar Uniform Charlie Alfa November Romeo Echo Alfa Delta ?
+// Note:
+// The set of used punctuation is .!?.
+// Punctuation should be kept in your return string, but spaces should not.
+// Xray should not have a dash within.
+// Every word and punctuation mark should be seperated by a space ' '.
+// There should be no trailing whitespace
+
+function to_nato(words) {
+  return words
+    .replace(/\s/g, "")
+    .toLowerCase()
+    .split("")
+    .map(e => (NATO[e] ? NATO[e] : e))
+    .join(" ");
+}
+
+// ---- 
+
+// # Mexican Wave
+// Introduction
+// The wave (known as the Mexican wave in the English-speaking world outside North America) is an example of metachronal rhythm achieved in a packed stadium when successive groups of spectators briefly stand, yell, and raise their arms. Immediately upon stretching to full height, the spectator returns to the usual seated position.
+// The result is a wave of standing spectators that travels through the crowd, even though individual spectators never move away from their seats. In many large arenas the crowd is seated in a contiguous circuit all the way around the sport field, and so the wave is able to travel continuously around the arena; in discontiguous seating arrangements, the wave can instead reflect back and forth through the crowd. When the gap in seating is narrow, the wave can sometimes pass through it. Usually only one wave crest will be present at any given time in an arena, although simultaneous, counter-rotating waves have been produced. (Source Wikipedia)
+
+// Task
+//In this simple Kata your task is to create a function that turns a string into a Mexican Wave. You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up. 
+
+// Rules
+// 1. The input string will always be lower case but may be empty.
+// 2. If the character in the string is whitespace then pass over it as if it was an empty seat. 
+
+// 1. check for empty - if - no string - then return
+// 2. check for whitespace - if there is whitespace - ignore it (regEx probably)
+
+function wave(str){
+  if (!string){
+    return 'You need to pass a string through the function'
+  }
+  // Turn the string into an array so I can iterate over it
+  let arr = str.split(''); // -> [ 'h', 'e', 'l', 'l', 'o' ]
+  // Check if the array is empty
+  if (arr.length < 1){
+    return
+  }
+  console.log(arr)
+  // Create a for loop to be able to grab every element of the array
+  for (let i = 0; i < arr.length; i++){
+    
+  }
+}
