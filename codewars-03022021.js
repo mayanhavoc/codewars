@@ -114,19 +114,17 @@ function to_nato(words) {
 // 1. check for empty - if - no string - then return
 // 2. check for whitespace - if there is whitespace - ignore it (regEx probably)
 
+// function wave(str){
+//   // check if the string is empty, if it is - return
+//   if (!string){
+//     return
+//   }
+//   // Turn the string into an array so I can iterate over it
+//   let arr = str.split(''); // -> [ 'h', 'e', 'l', 'l', 'o' ]
+//   // Create a for loop to be able to grab every element of the array
+  
+// }
+
 function wave(str){
-  if (!string){
-    return 'You need to pass a string through the function'
-  }
-  // Turn the string into an array so I can iterate over it
-  let arr = str.split(''); // -> [ 'h', 'e', 'l', 'l', 'o' ]
-  // Check if the array is empty
-  if (arr.length < 1){
-    return
-  }
-  console.log(arr)
-  // Create a for loop to be able to grab every element of the array
-  for (let i = 0; i < arr.length; i++){
-    
-  }
+  // return an Array from 
 }
