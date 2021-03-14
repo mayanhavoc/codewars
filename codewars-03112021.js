@@ -134,3 +134,59 @@ function squareSum(numbers) {
 
 const setAlarm = (employed, vacation) => employed && !vacation;
 
+// # Array plus array
+// I'm new to coding and now I want to get the sum of two arrays...actually the sum of all their elements. I'll appreciate for your help.
+// P.S. Each array includes only integer numbers. Output is a number too.
+
+function arrayPlusArray(arr1, arr2) {
+    return arr1.concat(arr2).reduce((acc,cv)=> acc + cv);
+    }
+
+// ---
+
+// # Returning Strings
+// Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+// SQL: return results in a column named greeting
+// [Make sure you type the exact thing I wrote or the program may not execute properly]
+  
+function greet(name){
+    //your code here
+    return `Hello, ${name} how are you doing today?`;
+  }
+
+// ---
+
+// # Are You Playing Banjo?
+// Create a function which answers the question "Are you playing banjo?".
+// If your name starts with the letter "R" or lower case "r", you are playing banjo!
+// The function takes a name as its only argument, and returns one of the following strings:
+// name + " plays banjo" 
+// name + " does not play banjo"
+// Names given are always valid strings.
+
+function areYouPlayingBanjo(name) {
+    // Implement me
+   if (name[0].toLowerCase() === "r"){
+       return `${name} plays banjo`
+   } else {
+       return `${name} does not play banjo`
+   }
+  }
+
+// ---
+
+// # Generate range of integers
+// Implement a function named generateRange(min, max, step), which takes three arguments and generates a range of integers from min to max, with the step. The first integer is the minimum value, the second is the maximum of the range and the third is the step. (min < max)
+// Task
+// Implement a function named
+// generateRange(2, 10, 2) // should return array of [2,4,6,8,10]
+// generateRange(1, 10, 3) // should return array of [1,4,7,10]
+// Note
+// min < max
+// step > 0
+// the range does not HAVE to include max (depending on the step)
+
+function generateRange(min, max, step){
+    let max = min + step;
+    
+}
